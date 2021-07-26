@@ -244,7 +244,7 @@ provider.rx.request(.userProfile("ashfurrow")).subscribe { event in
     switch event {
     case let .success(response):
         image = UIImage(data: response.data)
-    case let .error(error):
+    case let .failure(error):
         print(error)
     }
 }

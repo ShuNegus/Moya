@@ -38,7 +38,7 @@ provider.rx.request(.zen).subscribe { event in
     switch event {
     case .success(let response):
         // do something with the data
-    case .error(let error):
+    case .failure(let error):
         // handle the error
     }
 }
@@ -135,7 +135,7 @@ provider.rx.request(.zen)
         switch event {
         case .success(let response):
             // do something with the data
-        case .error(let error):
+        case .failure(let error):
             // handle the error, which can be an underlying error or a status code error
         }
     }
@@ -183,7 +183,7 @@ provider.rx.request(.zen)
         case .success(let json):
             // Notice that now we do not get a Response object anymore but rather the JSON object
             // do something with the json
-        case .error(let error):
+        case .failure(let error):
             // handle the error, which can be an underlying error, a status code error, or an json mapping error
         }
     }
@@ -250,7 +250,7 @@ provider.rx.request(.user("jp"))
         case .success(let user):
             // Notice that now we do not get a Response object anymore but rather the User object
             // do something with the user
-        case .error(let error):
+        case .failure(let error):
             // handle the error, which can be an underlying error, a status code error, or an object mapping error
         }
     }
@@ -332,7 +332,7 @@ provider.rx.request(.users)
         case .success(let users):
             // Notice that now we do not get a Response object anymore but rather an array of User objects
             // do something with the user
-        case .error(let error):
+        case .failure(let error):
             // handle the error, which can be an underlying error, a status code error, or an object mapping error
         }
     }
@@ -399,7 +399,7 @@ provider.rx.request(.users)
             // Notice that now we do not get a Response object anymore but rather an array of User objects
             // Because the failsOnEmptyData is false and our user object allows optional, our array got initialized with an empty User object
             // do something with the user
-        case .error(let error):
+        case .failure(let error):
             // handle the error, which can be an underlying error, a status code error, or an object mapping error
         }
     }

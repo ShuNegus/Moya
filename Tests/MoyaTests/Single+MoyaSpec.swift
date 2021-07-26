@@ -201,7 +201,7 @@ final class SingleMoyaSpec: QuickSpec {
                     switch event {
                     case .success:
                         fail("next called for invalid data")
-                    case .error(let error):
+                    case .failure(let error):
                         receivedError = error as? MoyaError
                     }
                 }
@@ -245,7 +245,7 @@ final class SingleMoyaSpec: QuickSpec {
                     switch event {
                     case .success:
                         fail("next called for invalid data")
-                    case .error(let error):
+                    case .failure(let error):
                         receivedError = error as? MoyaError
                     }
                 }
@@ -303,7 +303,7 @@ final class SingleMoyaSpec: QuickSpec {
                     switch event {
                     case .success:
                         fail("next called for invalid data")
-                    case .error(let error):
+                    case .failure(let error):
                         receivedError = error as? MoyaError
                     }
                 }
@@ -570,7 +570,7 @@ final class SingleMoyaSpec: QuickSpec {
                     switch event {
                     case .success:
                         fail("success called for invalid data")
-                    case .error(let error):
+                    case .failure(let error):
                         receivedError = error
                     }
                 }

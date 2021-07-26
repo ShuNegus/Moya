@@ -213,7 +213,7 @@ final class ObservableMoyaSpec: QuickSpec {
                     switch event {
                     case .next:
                         fail("next called for invalid data")
-                    case .error(let error):
+                    case .failure(let error):
                         receivedError = error as? MoyaError
                     default:
                         break
@@ -254,7 +254,7 @@ final class ObservableMoyaSpec: QuickSpec {
                     switch event {
                     case .next:
                         fail("next called for invalid data")
-                    case .error(let error):
+                    case .failure(let error):
                         receivedError = error as? MoyaError
                     default:
                         break
@@ -312,7 +312,7 @@ final class ObservableMoyaSpec: QuickSpec {
                     switch event {
                     case .next:
                         fail("next called for invalid data")
-                    case .error(let error):
+                    case .failure(let error):
                         receivedError = error as? MoyaError
                     default:
                         break
@@ -581,7 +581,7 @@ final class ObservableMoyaSpec: QuickSpec {
                     switch event {
                     case .next:
                         fail("next called for invalid data")
-                    case .error(let error):
+                    case .failure(let error):
                         receivedError = error
                     default:
                         break
